@@ -6,7 +6,7 @@ const app = express();
 
 module.exports = app;
 
-app.get('/', async(req, res)=> {
+app.get('/', async(req, res, next)=> {
   try {
     const source = path.join(__dirname, 'olive.jpg');
     const target = path.join(__dirname, 'olive.thumb.jpg');
